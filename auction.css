@@ -1,0 +1,146 @@
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #000;
+    color: #00ff00;
+    overflow-x: hidden;
+    margin: 0;
+    padding-bottom: 60px;
+}
+
+.custom-bg {
+    background-color: #000;
+}
+
+.custom-header {
+    background-color: #1a1a1a;
+    border-bottom: 1px solid #00ff00;
+}
+
+.custom-button {
+    background-color: #00ff00;
+    color: #000;
+}
+
+.custom-button:hover {
+    background-color: #33ff33;
+}
+
+.custom-table thead th {
+    border-bottom: 1px solid #00ff00;
+}
+
+.custom-table tbody tr {
+    border-bottom: 1px solid #00ff00;
+}
+
+input::placeholder {
+    color: #00ff00;
+}
+
+@media (max-width: 640px) {
+    .custom-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-content {
+        order: 1;
+        width: 100%;
+        margin-bottom: 0.5rem;
+        text-align: left;
+    }
+
+    .header-buttons {
+        order: 2;
+        width: 100%;
+        margin-bottom: 0.5rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .top-right {
+        order: 3;
+        width: 100%;
+        text-align: right;
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-sizing: border-box;
+}
+
+.modal-content {
+    background-color: #1a1a1a;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #00ff00;
+    width: 90%;
+    max-width: 600px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.modal-close {
+    color: #00ff00;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: #33ff33;
+}
+
+.banner {
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    background-color: black;
+    border-top: 2px solid lime;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 10px lime;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.banner-text {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5rem;
+    color: lime;
+    white-space: nowrap;
+    animation: scroll-left 20s linear infinite;
+    padding-left: 100%;
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@media (max-width: 600px) {
+    .banner {
+        height: 40px;
+    }
+
+    .banner-text {
+        font-size: 1rem;
+    }
+}
